@@ -1,0 +1,73 @@
+{{define `title`}}Engineering | Exupery Software{{end}}
+
+{{define `main`}}
+<div id="engineering">
+
+  <div class="heading">
+    <div class="row">
+      <h1>Engineering</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="topic">
+      <div class="topic-image">
+        <img src="/static/architecture.svg" alt="Layers">
+      </div>
+      <div class="topic-text">
+        <h2>Architecture</h2>
+        <ul>
+          <li>How can I separate my business logic from other layers
+            like controllers and storage do increaase reusability?</li>
+          <li>What are my dependencies and which ones do I really need?
+            How do I vet dependencies and keep them up-to-date?</li>
+          <li>How can I model my (relational) data to be consistent and
+            stay flexible for future changes?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="topic">
+      <div class="topic-image">
+        <img src="/static/coding.svg" alt="Layers">
+      </div>
+      <div class="topic-text">
+        <h2>Coding</h2>
+        <ul>
+          <li>How can I create regular analyses and reports from my data
+            and use them to easily take further decisions?</li>
+          <li>What are some ways to connect different and independent
+            systems through a central service?
+          <li>How can I leverage my version control system and code
+            reviews to increase the quality of my code? What role does a
+            single commit play in the overall maintainability of my code
+            base?</li>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="topic">
+      <div class="topic-image">
+        <img src="/static/testing.svg" alt="Layers">
+      </div>
+      <div class="topic-text">
+        <h2>Testing</h2>
+        <ul>
+          <li>What can I do to make my code more testable?</li>
+          <li>How can I substitute, i.e. "mock", other types and external
+            systems in my tests?</li>
+          <li>Which type of test, e.g. unit, integration, regression,
+            should I even write and why?</li>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+{{end}}
