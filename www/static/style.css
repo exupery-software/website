@@ -272,3 +272,35 @@ main .topic-text {
 #training > #courses section h2 {
     align-self: center;
 }
+
+/* footnotes */
+
+sup {
+
+}
+
+/* sup {
+    font-size: 0.6em;
+    vertical-align: top;
+    position: relative;
+    top: -0.5em;
+} */
+
+section.footnotes {
+    font-size: 0.9em;
+}
+section.footnotes hr {
+    border: 1px solid teal;
+}
+section.footnotes ol {
+    margin: 0;
+    padding: 0;
+}
+section.footnotes li {
+    list-style: none;
+    padding: 10px;
+}
+section.footnotes li:target {
+    border: 1px solid teal;
+    border-radius: 10px;
+}
