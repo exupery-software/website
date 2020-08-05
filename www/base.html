@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="{{block `description` .}}{{end}}">
+  <meta name="theme-color" content="hsl(180,100%,25%)">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{template `title`}}</title>
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="row">
+      <div id="header">
+        <a id="title" href="/index.html">
+          <img class="logo" src="/static/logo.svg" alt="Logo">
+          exupery software
+        </a>
+        <input id="menu" type="checkbox" />
+        <label for="menu"></label>
+        <nav id="nav">
+          <a href="/beratung.html">Beratung</a>
+          <a href="/entwicklung.html">Entwicklung</a>
+          <a href="/schulung.html">Schulung</a>
+          <a href="/kontakt.html">Kontakt</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    {{template `main`}}
+  </main>
+
+  <footer>
+    <div id="footer" class="row">
+      <p><span>© 2020 Exupery Software UG (haftungsbeschränkt)</span></p>
+      <p>
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

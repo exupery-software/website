@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="400" width="400">
+  <style>
+    symbol {
+      overflow: visible;
+    }
+    circle, path {
+      fill: white;
+      stroke: grey;
+      stroke-linejoin: round;
+      stroke-width: 3;
+      vector-effect: non-scaling-stroke;
+    }
+  </style>
+
+  <symbol id="avatar">
+    <path d="M -140 140 A 140 140 0 0 1 -45 20 A 70 70 0 1 1 45 20 A 140 140 0 0 1 140 140 Z" />
+  </symbol>
+
+  <symbol id="recruiting">
+    <use href="#avatar" transform="translate(120 180) scale(0.7)" />
+    <use href="#avatar" transform="translate(280 180) scale(0.7)" />
+    <use href="#avatar" transform="translate(200 180)" />
+  </symbol>
+
+  <use href="#recruiting" />
+</svg>

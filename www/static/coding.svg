@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="400" width="400">
+  <style>
+    symbol {
+      overflow: visible;
+    }
+    path {
+      fill: white;
+      stroke: grey;
+      stroke-linejoin: round;
+      stroke-width: 3;
+      vector-effect: non-scaling-stroke;
+    }
+  </style>
+
+  <symbol id="angle">
+    <path d="
+      M -20 -20
+      A 5 5 0 0 1 -10 -20
+      L -10 10
+      L 20 10
+      A 5 5 0 0 1 20 20
+      L -20 20
+      Z
+    " />
+  </symbol>
+
+  <symbol id="line">
+     <path d="
+      M -5 -40
+      A 5 5 0 0 1 5 -40
+      L 5 40
+      A 5 5 0 0 1 -5 40
+      Z
+    " />
+  </symbol>
+
+  <symbol id="coding" >
+    <g transform="translate(200 200) scale(2.5)">
+      <use href="#angle" transform="translate(-40 0) rotate(45)" />
+      <use href="#line" transform="translate(0) rotate(22.5)" />
+      <use href="#angle" transform="translate(40 0) rotate(-135)" />
+    </g>
+  </symbol>
+
+  <use href="#coding" />
+</svg>

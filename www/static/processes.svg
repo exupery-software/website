@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="400" width="400">
+  <style>
+    symbol {
+      overflow: visible;
+    }
+    path {
+      fill: white;
+      stroke: grey;
+      stroke-width: 3;
+      stroke-linejoin: round;
+      vector-effect: non-scaling-stroke;
+    }
+  </style>
+
+  <symbol id="arrow">
+    <path d="M 100 0
+             A 100 100 0 0 1 0 100
+             L 25 121 L 0 150
+             A 150 150 0 0 0 150 0
+             L 170 0 L 125 -50 L 80 0
+             Z" />
+  </symbol>
+
+  <symbol id="processes">
+    <g transform="translate(200 200) scale(1.1)">
+      <use href="#arrow" />
+      <use href="#arrow" transform="rotate(120)" />
+      <use href="#arrow" transform="rotate(240)" />
+    </g>
+  </symbol>
+
+  <use href="#processes" />
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="400" width="400">
+  <style>
+    symbol {
+      overflow: visible;
+    }
+    line, rect {
+      stroke: grey;
+      stroke-linecap: round;
+      vector-effect: non-scaling-stroke;
+    }
+    line {
+      stroke-width: 10;
+    }
+    rect {
+      fill: white;
+      stroke-width: 3;
+    }
+  </style>
+
+  <symbol id="flipboard">
+    <line x1="0" x2="0" y1="0" y2="-180" />
+    <line x1="0" x2="0" y1="0" y2="100" />
+    <line x1="0" x2="-100" y1="0" y2="150" />
+    <line x1="0" x2="100" y1="0" y2="150" />
+    <g transform="translate(-150 -150)">
+      <rect width="300" height="200" />
+      <rect x="-15" y="-15" width="330" height="20" rx="10" ry="10" />
+      <rect x="-15" y="185" width="330" height="20" rx="10" ry="10" />
+    </g>
+  </symbol>
+
+  <symbol id="training">
+    <use href="#flipboard" transform="translate(200 210)" />
+  </symbol>
+
+  <use href="#training" />
+</svg>

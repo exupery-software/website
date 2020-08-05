@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="400" width="400">
+  <style>
+    symbol {
+      overflow: visible;
+    }
+    path {
+      fill: white;
+      stroke: grey;
+      stroke-linejoin: round;
+      stroke-width: 3;
+      vector-effect: non-scaling-stroke;
+    }
+  </style>
+
+  <symbol id="hexagon">
+    <g transform="rotate(90)">
+      <path d="M 100 0 L 50 -86.6 L -50 -86.6 L -100 0 L -50 86.6 L 50 86.6 Z" />
+    </g>
+  </symbol>
+
+  <symbol id="triplet">
+    <use href="#hexagon" transform="translate(0 -111.6)" />
+    <use href="#hexagon" transform="translate(-100 61.6)" />
+    <use href="#hexagon" transform="translate(100 61.6)" />
+  </symbol>
+
+  <symbol id="architecture" >
+    <use href="#triplet" transform="translate(200 220)" />
+  </symbol>
+
+  <use href="#architecture" />
+</svg>

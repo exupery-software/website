@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="400" width="400">
+  <style>
+    symbol {
+      overflow: visible;
+    }
+    path {
+      fill: white;
+      stroke: grey;
+      stroke-width: 3;
+      stroke-linejoin: round;
+      vector-effect: non-scaling-stroke;
+    }
+  </style>
+
+  <symbol id="puzzle-piece">
+    <path d="M 60 0 L 110 0 A 10 10 0 0 1 120 10 L 120 50 A 25 25 0 1 1 120 75 L 120 110 A 10 10 0 0 1 110 120 L 75 120 A 25 25 0 1 0 50 120 L 10 120 A 10 10 0 0 1 0 110 L 0 10 A 10 10 0 0 1 10 0 Z" />
+  </symbol>
+
+  <symbol id="consulting">
+    <g transform="translate(50 110)">
+      <use href="#puzzle-piece" transform="translate(0 0) rotate(0)" />
+      <use href="#puzzle-piece" transform="translate(0 120) rotate(-90 60 60)" />
+      <use href="#puzzle-piece" transform="translate(120 120) rotate(180 60 60)" />
+      <use href="#puzzle-piece" transform="translate(170 -50) rotate(60 60 60)" />
+    </g>
+  </symbol>
+
+  <use href="#consulting" />
+</svg>

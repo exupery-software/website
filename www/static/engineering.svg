@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="400" width="400">
+  <style>
+    symbol {
+      overflow: visible;
+    }
+    circle, path {
+      stroke-width: 3;
+      stroke-linecap: round;
+      vector-effect: non-scaling-stroke;
+    }
+  </style>
+
+  <mask id="circle-mask">
+    <circle r="100" fill="white"/>
+    <circle r="50" fill="black"/>
+  </mask>
+
+  <symbol id="cog">
+    <circle r="100" fill="white" mask="url(#circle-mask)" />
+    <circle r="50" fill="none" stroke="grey" />
+    <path d="M -25.8 96.6 L -17.5 130 L 17.5 130 L 25.8 96.6 A 100 100 45 0 0 50 86.6"
+          id="cog-part" fill="white" stroke="grey" />
+    <use href="#cog-part" transform="rotate(45)" />
+    <use href="#cog-part" transform="rotate(90)" />
+    <use href="#cog-part" transform="rotate(135)" />
+    <use href="#cog-part" transform="rotate(180)" />
+    <use href="#cog-part" transform="rotate(225)" />
+    <use href="#cog-part" transform="rotate(270)" />
+    <use href="#cog-part" transform="rotate(315)" />
+  </symbol>
+
+  <symbol id="engineering">
+    <use href="#cog" transform="translate(150 250) rotate(22.5)" />
+    <use href="#cog" transform="translate(300 100) scale(0.5 0.5)" />
+  </symbol>
+
+  <use href="#engineering" />
+</svg>
