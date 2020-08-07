@@ -30,7 +30,6 @@ COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build /usr/share/zoneinfo /usr/share/zoneinfo
 
 # Copy the requested command and set it as the entrypoint.
-ARG COMMAND
-COPY --from=build /go/src/build/$COMMAND /entrypoint
+COPY --from=build /go/src/build/website /entrypoint
 COPY --from=build /go/src/www/out /www/out
 ENTRYPOINT ["/entrypoint"]

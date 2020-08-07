@@ -15,11 +15,9 @@ generate: export PATH := $(PWD)/bin:$(PATH)
 generate: $(TPL)
 	$(GO) generate .
 
-COMMAND := webserver
-
 .PHONY: build
 build: generate
-	$(GO) build -o build/$(COMMAND) .
+	$(GO) build -o build/website .
 
 GCP_PROJECT ?= project-not-set
 DOCKER_REGISTRY := eu.gcr.io/$(GCP_PROJECT)
@@ -27,10 +25,9 @@ DOCKER_REGISTRY := eu.gcr.io/$(GCP_PROJECT)
 .PHONY: docker-build
 docker-build:
 	docker build \
-		--build-arg COMMAND=$(COMMAND) \
-		--tag "$(DOCKER_REGISTRY)/$(COMMAND):$(VERSION)" \
+		--tag "$(DOCKER_REGISTRY)/website:$(VERSION)" \
 		.
 
 .PHONY: docker-push
 docker-push: docker-build
-	docker push "$(DOCKER_REGISTRY)/$(COMMAND):$(VERSION)"
+	docker push "$(DOCKER_REGISTRY)/website:$(VERSION)"
