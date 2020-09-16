@@ -178,6 +178,17 @@ a {
     margin-left: 1rem;
 }
 
+#footer a[href^="https://github.com"]::before {
+    content: '';
+    background-image: url('/static/github-mark.png');
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 23px;
+    height: 18px;
+    vertical-align: text-top;
+}
+
 /* index */
 
 #index #service {
