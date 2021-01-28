@@ -19,7 +19,7 @@ generate: $(TPL)
 build: generate
 	$(GO) build -o build/website .
 
-GCP_PROJECT ?= project-not-set
+GCP_PROJECT := exupery-software
 DOCKER_REGISTRY := eu.gcr.io/$(GCP_PROJECT)
 
 .PHONY: docker-build
@@ -31,3 +31,11 @@ docker-build:
 .PHONY: docker-push
 docker-push: docker-build
 	docker push "$(DOCKER_REGISTRY)/website:$(VERSION)"
+
+.PHONY: docker-deploy
+docker-deploy: docker-push
+	gcloud --project=$(GCP_PROJECT) run deploy \
+		--platform managed \
+		--region europe-west4 \
+		--image "$(DOCKER_REGISTRY)/website:$(VERSION)" \
+		exupery-software-website
