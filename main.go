@@ -1,17 +1,21 @@
 package main
 
-//go:generate ./render.sh
-
 import (
+	"embed"
+	"io/fs"
 	"log"
 	"net/http"
 	"strings"
 	"time"
 )
 
+//go:embed app/build/*
+var www embed.FS
+
 func main() {
-	fs := http.FileServer(http.Dir("./www/out"))
-	handler := wwwRedirect(fs)
+	fsys, _ := fs.Sub(www, "app/build")
+	handler := http.FileServer(http.FS(fsys))
+	handler = wwwRedirect(handler)
 
 	srv := &http.Server{
 		Addr:         ":8080",
